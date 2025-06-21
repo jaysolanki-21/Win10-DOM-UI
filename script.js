@@ -27,5 +27,22 @@ function decreasebattery(){
     }, 1000);
 }
 
+function hideelements(){
+    document.querySelector('.thispc').style.display = 'none';
+}
+
+hideelements();
+
+
+document.querySelector('.thispc .titlebar .first .right .close').addEventListener('click', () => {
+    document.querySelector('.screen').style.display = 'block';
+    document.querySelector('.thispc').style.display = 'none';
+})
+
+document.querySelector('.homescreen .screen .icons .homethispc').addEventListener('click', () => {
+    document.querySelector('.thispc').style.display = 'block';
+     document.querySelector('.screen').style.display = 'none';
+})
+
 // decreasebattery();
 

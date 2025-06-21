@@ -81,6 +81,8 @@ main {
 
 .taskbar{
     width: 100%;
+    bottom: 0;
+    position: fixed;
     height: 5%;
     display: flex;
     flex-direction: row;
@@ -293,4 +295,228 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.taskbar .right .volumelow{
+    width: 1.2em;
+    height: 1.2em;
+    scale: 1.1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thispc{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+.thispc .titlebar{
+    width: 100%;
+    height: 5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.thispc .titlebar .first{
+    width: 100%;
+    height: 1.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.thispc .titlebar .first .left{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.thispc .titlebar .first .left .icons{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.thispc .titlebar .first .left span{
+    color: black;
+    font-size: 0.8em;
+    font-weight: 100;
+}
+
+
+.thispc .titlebar .first .left .icon{
+    margin-top: 0.3em;
+    width: 1em;
+    height: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thispc .titlebar .first .left .icon img{
+    width: 100%;
+    height: 100%;
+}
+
+.thispc .titlebar .first .right{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5em;
+    padding-right: 1em;
+    gap: 1em;
+}
+
+.thispc .titlebar .first .right .icon{
+    width: 1.2em;
+    height: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+
+.close:hover{
+    background-color: red;
+}  
+
+.thispc .titlebar .second{
+    width: 100%;
+    height: 1.5em;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5em;
+    gap: 1em;
+    border-bottom: 0.001em solid black;
+}
+
+.thispc .second .menu{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.thispc .second .menu span{
+    cursor: pointer;
+    width: 6em;
+    font-size: 0.8em;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0.5em;
+}
+
+.thispc .second .menu span:hover{
+    background-color: gray;
+}
+
+.thispc .titlebar .third{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.thispc .titlebar .third .left{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 1em;
+    gap: 0.5em;
+    gap: 1em;
+}
+
+.thispc .titlebar .third .left .rightarrow{
+    opacity: 0.2;
+}
+
+.thispc .titlebar .third .left .downarrow{
+    opacity: 0.2;
+}
+
+.thispc .titlebar .third .right{
+    width: 100%;
+    height: 150%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1em;
+    gap: 0.5em;
+    margin-left: 1em;
+}
+
+.thispc .titlebar .third .right .location{
+    width: 120%;
+    height: 1.3em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.thispc .titlebar .third .right .search{
+    width: 20%;
+    height: 1.3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.thispc .titlebar .third .right .search input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding-left: 0.5em;
+}
+
+.thispc .titlebar .third .right .search .searchicon{
+    width: 1em;
+    height: 1em;
+    display: flex;
+    justify-content: center; 
+    padding-right: 0.5em;
+    align-items: center;
+}
+
+.thispc .titlebar .third .right .location .thispcicon{
+    width: 1em;
+    height: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thispc .titlebar .third .right .location .thispcicon img{
+    width: 100%;
+    height: 100%;
+}
+
+.thispc .titlebar .third .right .location span{
+    font-size: 0.8em;
 }
