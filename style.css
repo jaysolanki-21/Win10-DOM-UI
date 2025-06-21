@@ -1,0 +1,296 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+/* home screen */
+
+.homescreen{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.screen{
+    width: 100%;
+    height: 95%;
+    background-image: url(./images/pexels-pixabay-414144.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.screen .icons{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1em;
+}
+
+.screen .icons .icon{
+    width: 5.2rem;
+    padding: 0.3em;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-items: top;
+    gap: 0.2em;
+}
+
+.screen .icons .icon .iconimg{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen .icons .icon .iconimg img{
+    width: 100%;
+    height: 100%;
+}
+
+.screen .icons .icon .iconname{
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 0.7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+}
+
+/* taskbar */
+
+.taskbar{
+    width: 100%;
+    height: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #273339;
+    
+}
+
+.taskbar .left{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.taskbar .left .start{
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskbar .left .start img{
+    width: 100%;
+    height: 100%;
+}
+
+.taskbar .left .search{
+    width: 15em;
+    height: 100%;
+    background-color: #1f1f1f;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskbar .left .search input{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 0 0.5em;
+    font-size: 1em;
+    font-weight: 100;
+}
+
+.taskbar .left .apps{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+}
+
+.taskbar .left .apps .app{
+    height: 100%;
+    width: 2.7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskbar .left .apps i{
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-size: 1.7em;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskbar .left .apps .chrome img{
+    width: 80% !important;
+    aspect-ratio: 1/1 !important;
+    display: block;
+    font-size: 1.7em;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskbar .left .apps .app img{
+    width: 60%;
+    height: 60%;
+    display: block;
+    font-size: 1.7em;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search .searchicon{
+    width: 2em;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.search .searchicon i{
+    color: black;
+    font-size: 1.2em;
+}
+
+.whatsapp{
+    color: #25D366;
+}
+
+/* taskbar :right */
+
+
+.taskbar .right{
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5em;
+    padding-right: 1em;
+    gap: 1em;
+}
+
+.taskbar .right .icon{
+    width: 1.2em;
+    height: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskbar .right .icon img{
+    width: 100%;
+    height: 100%;
+}
+
+.taskbar .right .datetime span{
+    color: white;
+    font-size: 0.9em;
+    font-weight: 100;
+}
+
+.taskbar .right .battery{
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskbar .right .battery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskbar .right .battery .batteryicon{
+    width: 100%;
+    padding: 0.1em;
+    height: 0.75em;
+    border: 1px solid white;
+    position: relative;
+}
+
+.taskbar .right .battery .batteryicon .batterypercent{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.taskbar .right .wifi{
+    width: 1.2em;
+    height: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskbar .right .airplane{
+    width: 1.2em;
+    height: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskbar .right .volumefull{
+    width: 1.2em;
+    height: 1.2em;
+    scale: 1.3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskbar .right .muted{
+    width: 1.2em;
+    height: 1.2em;
+    scale: 1.1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
