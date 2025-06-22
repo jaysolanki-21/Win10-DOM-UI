@@ -520,3 +520,141 @@ main {
 .thispc .titlebar .third .right .location span{
     font-size: 0.8em;
 }
+
+.thispc .thispccontent{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.thispc .thispccontent .left{
+    width: 12%;
+    height: 86vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-right: 1px solid black;
+}
+
+.thispc .thispccontent .collapes{
+    margin-top: 1.5em;
+    width: 100%;
+    height: 2em;
+    padding-left: 0.5em;
+    display: flex;
+}
+
+.thispc .thispccontent .collapes .menuicon{
+    width: 1em;
+    height: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thispc .thispccontent .collapes .menuicon img{
+    width: 100%;
+    height: 100%;
+}
+
+.thispc .thispccontent .collapes span{
+    font-size: 1em;
+    margin-left: 0.3em;
+}
+
+.thispc .thispccontent .collapes .right{
+    display: none;
+}
+
+.thispc .thispccontent .left .menus{
+    margin-left: 2.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+}
+
+.thispc .thispccontent .left .menus .menu{
+    display: flex;
+    gap: 0.2em;
+}
+
+.thispc .thispccontent .left .menus .menu .menuicon{
+    height: 1em;
+    width: 1em;
+}
+
+.thispc .thispccontent .left .menus .menu .menuicon img{
+    height: 100%;
+    width: 100%;
+}
+
+.thispc .thispccontent .right{
+    width: 88%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1em;
+    gap: 1em;
+    color: blue;
+    border-right: 1px solid black;
+}
+
+.devicedriverright{
+    display: none !important;
+}
+
+.thispc .thispccontent .right .driverscreen .drivers{
+    display: flex;
+    gap: 2em;
+    margin-top: 1em;
+}
+
+.thispc .thispccontent .right .driverscreen .drivers .driver{
+    display: flex;
+    gap: 0.5em;
+}
+
+.thispc .thispccontent .right .driverscreen .drivers .driver .driverinfo{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.thispc .thispccontent .right .driverscreen .drivers .driver .driverinfo .storage{
+    width: 100%;
+    height: 1.1em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #E6E6E6;
+}
+
+.thispc .thispccontent .right .driverscreen .drivers .driver .driverinfo .storage .fill{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #26A0DA;
+}
+
+.thispc .thispccontent .right .driverscreen .drivers .driver .driverinfo span{
+    color: black;
+}
+
+.thispc .thispccontent .right .driverscreen .drivers .driver .driverimage{
+    width: 3em;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thispc .thispccontent .right .driverscreen .drivers .driver .driverimage img{
+    width: 100%;
+    height: 100%;
+}
