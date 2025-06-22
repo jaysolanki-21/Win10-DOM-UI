@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>windows-10</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+        integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <main>
         <section class="homescreen">
@@ -32,6 +36,74 @@
                     </div>
                 </div>
             </div>
+            <div class="notification">
+                <div class="first">
+                    <span>Manage notifications</span>
+                </div>
+                <div class="second">
+                    <span>No new notificatins</span>
+                </div>
+                <div class="third">
+                    <div class="notificationbutton location">
+                        <div class="icon"></div>
+                        <span>Location</span>
+                    </div>
+                    <div class="notificationbutton BatterySaver">
+                        <div class="icon"></div>
+                        <span>Battery Saver</span>
+                    </div>
+                    <div class="notificationbutton Bluetooth">
+                        <div class="icon"></div>
+                        <span>Bluetooth</span>
+                    </div>
+                    <div class="notificationbutton NightLight NightLight">
+                        <div class="icon"></div>
+                        <span>Night Light</span>
+                    </div>
+                    <div class="notificationbutton MobileHotspot">
+                        <div class="icon"></div>
+                        <span>Mobile Hotspot</span>
+                    </div>
+                    <div class="notificationbutton Airplanemode">
+                        <div class="icon"></div>
+                        <span>Airplane mode</span>
+                    </div>
+                    <div class="notificationbutton NearbySharing">
+                        <div class="icon"></div>
+                        <span>Nearby Sharing</span>
+                    </div>
+                    <div class="notificationbutton AllSetting">
+                        <div class="icon"></div>
+                        <span>All Setting</span>
+                    </div>
+                    <div class="notificationbutton Network">
+                        <div class="icon"></div>
+                        <span>Network</span>
+                    </div>
+                    <div class="notificationbutton Connect">
+                        <div class="icon"></div>
+                        <span>Connect</span>
+                    </div>
+                    <div class="notificationbutton Project">
+                        <div class="icon"></div>
+                        <span>Project</span>
+                    </div>
+                    <div class="notificationbutton ScreenSnip">
+                        <div class="icon"></div>
+                        <span>Screen Snip</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="volume-popup">
+                <div class="volume-icons">
+                    <div class="volumemuted icon">🔇</div>
+                    <div class="volumelow icon">🔉</div>
+                    <div class="volumefull icon">🔊</div>
+                </div>
+                <input type="range" id="volumeSlider" min="0" max="100" />
+            </div>
+
             <div class="taskbar">
                 <div class="left">
                     <div class="start taskicon">
@@ -45,18 +117,18 @@
                     </div>
                     <div class="apps">
                         <div class="app whatsapp active">
-                             <i class="ri-whatsapp-line"></i>
+                            <i class="ri-whatsapp-line"></i>
                         </div>
-                       <div class="app chrome ">
+                        <div class="app chrome ">
                             <img src="./10125_icons/chrome.png" alt="">
                         </div>
                         <div class="app">
-                             <img src="./10125_icons/vs_code.png" alt="">
+                            <img src="./10125_icons/vs_code.png" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="right">
-                    <div class="icon">
+                    <div class="icon notificationicon">
                         <img src="./10125_icons/icons8-chat-message-32.png" alt="">
                     </div>
                     <div class="datetime">
@@ -64,7 +136,7 @@
                     </div>
                     <div class="battery">
                         <div class="batteryicon">
-                             <div class="batterypercent"></div>
+                            <div class="batterypercent"></div>
                         </div>
                     </div>
                     <div class="icon wifi">
@@ -80,7 +152,7 @@
                     <div class="icon volumefull">
                         <img src="./10125_icons/icons8-volume-64.png" alt="">
                     </div>
-                    <div class="icon volume muted">
+                    <div class="icon volumemuted">
                         <img src="./10125_icons/icons8-volume-off-24.png" alt="">
                     </div>
                     <div class="icon volume volumelow">
@@ -98,7 +170,7 @@
                     <div class="left">
                         <div class="icons">
                             <div class="icon">
-                                    <img src="./10125_icons/imageres_109.ico" alt="">
+                                <img src="./10125_icons/imageres_109.ico" alt="">
                             </div>
                             <span>|</span>
                             <div class="icon properties">
@@ -132,24 +204,24 @@
                 </div>
                 <div class="third">
                     <div class="left">
-                       <div class="leftarrow">
-                           <i class="ri-arrow-left-long-fill"></i>
-                       </div>
-                       <div class="rightarrow">
-                           <i class="ri-arrow-right-long-fill"></i>
-                       </div>
-                       <div class="downarrow">
-                           <i class="ri-arrow-down-s-line"></i>
-                       </div>
-                       <div class="uparrow">
-                           <i class="ri-arrow-up-long-fill"></i>
-                       </div>
+                        <div class="leftarrow">
+                            <i class="ri-arrow-left-long-fill"></i>
+                        </div>
+                        <div class="rightarrow">
+                            <i class="ri-arrow-right-long-fill"></i>
+                        </div>
+                        <div class="downarrow">
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                        <div class="uparrow">
+                            <i class="ri-arrow-up-long-fill"></i>
+                        </div>
 
                     </div>
                     <div class="right">
                         <div class="location">
                             <div class="thispcicon">
-                                  <img src="./10125_icons/imageres_109.ico" alt="">
+                                <img src="./10125_icons/imageres_109.ico" alt="">
                             </div>
                             <div class="rightarrow">
                                 <i class="ri-arrow-right-s-line"></i>
@@ -165,109 +237,111 @@
                     </div>
                 </div>
             </div>
-             <div class="thispccontent">
-                    <div class="left">
-                        <div class="collapes">
-                                <i class="ri-arrow-right-s-line rightarrow"></i>
-                                <i class="ri-arrow-down-s-line downarrow"></i>
-                                <div class="menuicon">
-                                   <img src="10125_icons/shell32_51380.ico" alt="">
-                                </div>
-                                <div class="menuname">
-                                    <span>Quick Access</span>
-                                </div>
+            <div class="thispccontent">
+                <div class="left">
+                    <div class="collapes">
+                        <i class="ri-arrow-right-s-line rightarrow"></i>
+                        <i class="ri-arrow-down-s-line downarrow"></i>
+                        <div class="menuicon">
+                            <img src="10125_icons/shell32_51380.ico" alt="">
                         </div>
-                        <div class="menus">
-                            <div class="menu">
-                                 <div class="menuicon">
-                                    <img src="./10125_icons/shell32_35.ico" alt="">
+                        <div class="menuname">
+                            <span>Quick Access</span>
+                        </div>
+                    </div>
+                    <div class="menus">
+                        <div class="menu">
+                            <div class="menuicon">
+                                <img src="./10125_icons/shell32_35.ico" alt="">
+                            </div>
+                            <div class="menuname">
+                                <span>Desktop</span>
+                            </div>
+                        </div>
+                        <div class="menu">
+                            <div class="menuicon">
+                                <img src="./10125_icons/shell32_2.ico" alt="">
+                            </div>
+                            <div class="menuname">
+                                <span>Documents</span>
+                            </div>
+                        </div>
+                        <div class="menu">
+                            <div class="menuicon">
+                                <img src="./10125_icons/imageres_184.ico" alt="">
+                            </div>
+                            <div class="menuname">
+                                <span>Downloads</span>
+                            </div>
+                        </div>
+                        <div class="menu">
+                            <div class="menuicon">
+                                <img src="./10125_icons/shell32_63008.ico" alt="">
+                            </div>
+                            <div class="menuname">
+                                <span>Pictures</span>
+                            </div>
+                        </div>
+                        <div class="menu">
+                            <div class="menuicon">
+                                <img src="./10125_icons/shell32_16824.ico" alt="">
+                            </div>
+                            <div class="menuname">
+                                <span>Music</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="driverscreen">
+                        <div class="driversheading">
+                            <span><i class="ri-arrow-down-s-line devicedriverdown"></i><i
+                                    class="ri-arrow-right-s-line devicedriverright"></i> Devices and Drivers (3)</span>
+                        </div>
+                        <div class="drivers">
+                            <div class="driver">
+                                <div class="driverimage">
+                                    <img src="./10125_icons/imageres_36.ico" alt="">
                                 </div>
-                                <div class="menuname">
-                                    <span>Desktop</span>
+                                <div class="driverinfo">
+                                    <span>Local Disk (C:)</span>
+                                    <div class="storage">
+                                        <div class="fill"></div>
+                                    </div>
+                                    <span>50.0 GB free of 100 GB</span>
                                 </div>
                             </div>
-                            <div class="menu">
-                                 <div class="menuicon">
-                                    <img src="./10125_icons/shell32_2.ico" alt="">
+                            <div class="driver">
+                                <div class="driverimage">
+                                    <img src="./10125_icons/imageres_32.ico" alt="">
                                 </div>
-                                <div class="menuname">
-                                    <span>Documents</span>
-                                </div>
-                            </div>
-                            <div class="menu">
-                                 <div class="menuicon">
-                                    <img src="./10125_icons/imageres_184.ico" alt="">
-                                </div>
-                                <div class="menuname">
-                                    <span>Downloads</span>
+                                <div class="driverinfo">
+                                    <span>Local Disk (D:)</span>
+                                    <div class="storage">
+                                        <div class="fill"></div>
+                                    </div>
+                                    <span>100.0 GB free of 200 GB</span>
                                 </div>
                             </div>
-                            <div class="menu">
-                                 <div class="menuicon">
-                                    <img src="./10125_icons/shell32_63008.ico" alt="">
+                            <div class="driver">
+                                <div class="driverimage">
+                                    <img src="./10125_icons/imageres_32.ico" alt="">
                                 </div>
-                                <div class="menuname">
-                                    <span>Pictures</span>
-                                </div>
-                            </div>
-                            <div class="menu">
-                                 <div class="menuicon">
-                                    <img src="./10125_icons/shell32_16824.ico" alt="">
-                                </div>
-                                <div class="menuname">
-                                    <span>Music</span>
+                                <div class="driverinfo">
+                                    <span>Local Disk (E:)</span>
+                                    <div class="storage">
+                                        <div class="fill"></div>
+                                    </div>
+                                    <span>100.0 GB free of 200 GB</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="right">
-                        <div class="driverscreen">
-                            <div class="driversheading">
-                                <span><i class="ri-arrow-down-s-line devicedriverdown"></i><i class="ri-arrow-right-s-line devicedriverright"></i> Devices and Drivers (3)</span>
-                            </div>
-                            <div class="drivers">
-                                <div class="driver">
-                                    <div class="driverimage">
-                                        <img src="./10125_icons/imageres_36.ico" alt="">
-                                    </div>
-                                    <div class="driverinfo">
-                                        <span>Local Disk (C:)</span>
-                                        <div class="storage">
-                                            <div class="fill"></div>
-                                        </div>
-                                        <span>50.0 GB free of 100 GB</span>
-                                    </div>
-                                </div>
-                                <div class="driver">
-                                    <div class="driverimage">
-                                        <img src="./10125_icons/imageres_32.ico" alt="">
-                                    </div>
-                                    <div class="driverinfo">
-                                        <span>Local Disk (D:)</span>
-                                        <div class="storage">
-                                            <div class="fill"></div>
-                                        </div>
-                                        <span>100.0 GB free of 200 GB</span>
-                                    </div>
-                                </div>
-                                <div class="driver">
-                                   <div class="driverimage">
-                                        <img src="./10125_icons/imageres_32.ico" alt="">
-                                    </div>
-                                    <div class="driverinfo">
-                                        <span>Local Disk (E:)</span>
-                                        <div class="storage">
-                                            <div class="fill"></div>
-                                        </div>
-                                        <span>100.0 GB free of 200 GB</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                </div>
             </div>
         </section>
     </main>
     <script src="script.js"></script>
 </body>
+
 </html>

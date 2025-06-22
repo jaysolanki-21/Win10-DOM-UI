@@ -6,6 +6,7 @@
 html,body{
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 main {
@@ -658,3 +659,100 @@ main {
     width: 100%;
     height: 100%;
 }
+
+.homescreen .notification{
+    width: 25%;
+    position: absolute;
+    right: -25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #273339;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.9;
+    padding: 0.5em;
+}
+
+.homescreen .notification .first{
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: tomato;
+}
+
+.homescreen .notification .second{
+    width: 100%;
+    font-size: 1.1rem;
+    height: 50%;
+    color: #E6E6E6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homescreen .notification .third{
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5em;
+    flex-wrap: wrap;
+}
+.homescreen .notification .third .notificationbutton {
+  width: 23%;
+  height: 15%;
+  margin-top: 0;
+  color: #E6E6E6;
+  background-color: #636464;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 100;
+  font-size: 0.7em;
+  padding: 0.1em 0.2em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.notificationbutton.active {
+  background-color: #ff8c00 !important;
+}
+
+.volume-popup {
+  position: absolute;
+  right: 90px;
+  bottom: 50px;
+  background-color: #2b2b2b;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 999;
+  display: none;
+}
+
+.volume-icons .icon {
+  display: none;
+  font-size: 20px;
+}
+
+.volumemuted.active,
+.volumelow.active,
+.volumefull.active {
+  display: block;
+}
+
+#volumeSlider {
+  width: 100%;
+  cursor: pointer;
+}
+
