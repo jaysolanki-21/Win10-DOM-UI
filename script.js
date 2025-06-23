@@ -159,22 +159,6 @@ function toggleState(button, key) {
 
 const notificationState = JSON.parse(localStorage.getItem("notification"));
 
-if(notificationState.wifi == "on"){
-    document.querySelector('.right .wifi').style.display = 'flex';
-    document.querySelector('.right .wifioff').style.display = 'none';
-}else{
-    document.querySelector('.right .wifi').style.display = 'none';
-    document.querySelector('.right .wifioff').style.display = 'flex';
-}
-
-if(notificationState.airplane == "on"){
-    document.querySelector('.right .airplane').style.display = 'flex';
-    document.querySelector('.right .wifi').style.display = 'none';
-    document.querySelector('.right .wifioff').style.display = 'none';
-}else{
-    document.querySelector('.right .airplane').style.display = 'none';
-}
-
 const volume = parseInt(notificationState.sound); 
 
 if (volume === 0) {
@@ -210,74 +194,190 @@ function saveNotificationSettings(settings) {
 }
 
 function updateVolumeIcon(volume) {
-  const mutedIcon = document.querySelector(".volumemuted");
-  const lowIcon = document.querySelector(".volumelow");
-  const fullIcon = document.querySelector(".volumefull");
+  const taskMuted = document.querySelector('.right .volumemuted');
+  const taskLow = document.querySelector('.right .volumelow');
+  const taskFull = document.querySelector('.right .volumefull');
 
-  mutedIcon.classList.remove("active");
-  lowIcon.classList.remove("active");
-  fullIcon.classList.remove("active");
+  const popupMuted = document.querySelector('.volume-popup .volumemuted');
+  const popupLow = document.querySelector('.volume-popup .volumelow');
+  const popupFull = document.querySelector('.volume-popup .volumefull');
+
+  [taskMuted, taskLow, taskFull, popupMuted, popupLow, popupFull].forEach(el => {
+    if (el) el.style.display = 'none';
+  });
 
   if (volume === 0) {
-    mutedIcon.classList.add("active");
+    if (taskMuted) taskMuted.style.display = 'flex';
+    if (popupMuted) popupMuted.style.display = 'block';
   } else if (volume <= 50) {
-    lowIcon.classList.add("active");
+    if (taskLow) taskLow.style.display = 'flex';
+    if (popupLow) popupLow.style.display = 'block';
   } else {
-    fullIcon.classList.add("active");
+    if (taskFull) taskFull.style.display = 'flex';
+    if (popupFull) popupFull.style.display = 'block';
   }
 }
 
 function setupVolumeSlider() {
   const slider = document.getElementById("volumeSlider");
-  if (!slider) return;
+  const volumeValue = document.getElementById("volumeValue"); // 👈
+
+  if (!slider || !volumeValue) return;
 
   let settings = getNotificationSettings();
-  slider.value = parseInt(settings.sound);
-  updateVolumeIcon(parseInt(settings.sound));
+  const currentVolume = parseInt(settings.sound);
+
+  slider.value = currentVolume;
+  volumeValue.textContent = `${currentVolume}%`; // 👈
+  updateVolumeIcon(currentVolume);
 
   slider.addEventListener("input", function () {
-    const volume = parseInt(this.value);
-    settings.sound = volume.toString();
+    const newVolume = parseInt(this.value);
+    settings.sound = newVolume.toString();
     saveNotificationSettings(settings);
-    updateVolumeIcon(volume);
+
+    volumeValue.textContent = `${newVolume}%`; // 👈
+    updateVolumeIcon(newVolume);
   });
 }
+
 
 function initVolumeModule() {
   initializeNotificationSettings();
   setupVolumeSlider();
+
+  const volume = parseInt(getNotificationSettings().sound);
+  updateVolumeIcon(volume);
 }
 
-document.addEventListener("DOMContentLoaded", initVolumeModule);
-
-document.querySelector('.right .volumefull').addEventListener('click', () => {
+function setupVolumePopupToggle() {
   const popup = document.querySelector('.volume-popup');
+  const taskbarIcons = document.querySelectorAll('.right .volumefull, .right .volumelow, .right .volumemuted');
 
-  if (popup.style.display === 'block') {
-    popup.style.display = 'none';
-  } else {
-    popup.style.display = 'block';
-  }
-});
+  taskbarIcons.forEach(icon => {
+    icon.addEventListener('click', () => {
+      popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+    });
+  });
 
-document.querySelector('.right .volumelow').addEventListener('click', () => {
-  const popup = document.querySelector('.volume-popup');
+  document.addEventListener('click', (e) => {
+    const isInsidePopup = popup.contains(e.target);
+    const isIconClick = Array.from(taskbarIcons).some(icon => icon.contains(e.target));
+    if (!isInsidePopup && !isIconClick) {
+      popup.style.display = 'none';
+    }
+  });
+}
 
-  if (popup.style.display === 'block') {
-    popup.style.display = 'none';
-  } else {
-    popup.style.display = 'block';
-  }
-});
-
-document.querySelector('.right .volumemuted').addEventListener('click', () => {
-  const popup = document.querySelector('.volume-popup');
-
-  if (popup.style.display === 'block') {
-    popup.style.display = 'none';
-  } else {
-    popup.style.display = 'block';
-  }
+document.addEventListener("DOMContentLoaded", () => {
+  initVolumeModule();
+  setupVolumePopupToggle();
 });
 
 
+if (!localStorage.getItem("wifiPanel")) {
+  localStorage.setItem("wifiPanel", JSON.stringify({
+    wifi: "off",
+    airplane: "off",
+    hotspot: "off"
+  }));
+}
+
+function getWifiState() {
+  return JSON.parse(localStorage.getItem("wifiPanel"));
+}
+
+function saveWifiState(state) {
+  localStorage.setItem("wifiPanel", JSON.stringify(state));
+}
+
+function updateWifiIcons() {
+  const state = getWifiState();
+
+  const wifiIcon = document.querySelector('.icon.wifi');
+  const wifioffIcon = document.querySelector('.icon.wifioff');
+  const airplaneIcon = document.querySelector('.icon.airplane');
+
+  if (state.airplane === 'on') {
+    airplaneIcon.style.display = 'block';
+    wifiIcon.style.display = 'none';
+    wifioffIcon.style.display = 'none';
+  } else {
+    airplaneIcon.style.display = 'none';
+    if (state.wifi === 'on') {
+      wifiIcon.style.display = 'block';
+      wifioffIcon.style.display = 'none';
+    } else {
+      wifiIcon.style.display = 'none';
+      wifioffIcon.style.display = 'block';
+    }
+  }
+}
+
+function togglePopup() {
+  const popup = document.querySelector('.wifi-popup');
+  popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+}
+
+['.icon.wifi', '.icon.wifioff', '.icon.airplane'].forEach(selector => {
+  const icon = document.querySelector(selector);
+  if (icon) {
+    icon.addEventListener('click', togglePopup);
+  }
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  const state = getWifiState();
+
+  ['wifi', 'airplane', 'hotspot'].forEach(type => {
+    const btn = document.querySelector(`.quick-toggle.${type}`);
+
+    if (state[type] === 'on') btn.classList.add('active');
+    if (state.airplane === 'on' && (type === 'wifi' || type === 'hotspot')) {
+      btn.classList.add('disabled');
+    }
+
+    btn.addEventListener('click', () => {
+      if (btn.classList.contains('disabled')) return;
+
+      state[type] = state[type] === 'on' ? 'off' : 'on';
+      btn.classList.toggle('active', state[type] === 'on');
+
+      if (type === 'airplane') {
+        const wifiBtn = document.querySelector('.quick-toggle.wifi');
+        const hotspotBtn = document.querySelector('.quick-toggle.hotspot');
+
+        if (state.airplane === 'on') {
+          state.wifi = 'off';
+          state.hotspot = 'off';
+
+          wifiBtn.classList.remove('active');
+          hotspotBtn.classList.remove('active');
+
+          wifiBtn.classList.add('disabled');
+          hotspotBtn.classList.add('disabled');
+        } else {
+          wifiBtn.classList.remove('disabled');
+          hotspotBtn.classList.remove('disabled');
+        }
+      }
+
+      saveWifiState(state);
+      updateWifiIcons();
+    });
+  });
+
+  updateWifiIcons(); 
+});
+
+document.addEventListener('click', (e) => {
+  const popup = document.querySelector('.wifi-popup');
+  const wifiIcons = document.querySelectorAll('.icon.wifi, .icon.wifioff, .icon.airplane');
+
+  const clickedOnPopup = popup.contains(e.target);
+  const clickedOnIcon = Array.from(wifiIcons).some(icon => icon.contains(e.target));
+
+  if (!clickedOnPopup && !clickedOnIcon) {
+    popup.style.display = 'none';
+  }
+});

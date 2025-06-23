@@ -13,6 +13,23 @@
 
 <body>
     <main>
+        <div class="volume-popup">
+            <div class="volume-icons">
+                <div class="volumemuted icon">🔇</div>
+                <div class="volumelow icon">🔉</div>
+                <div class="volumefull icon">🔊</div>
+            </div>
+
+            <div id="volumeValue" class="volume-label" style="display: inline-block;">100%</div>
+
+            <input type="range" id="volumeSlider" min="0" max="100" />
+        </div>
+
+        <div class="wifi-popup">
+            <div class="quick-toggle wifi">Wi-Fi</div>
+            <div class="quick-toggle airplane">Airplane Mode</div>
+            <div class="quick-toggle hotspot">Mobile Hotspot</div>
+        </div>
         <section class="homescreen">
             <div class="screen">
                 <div class="icons">
@@ -95,14 +112,7 @@
                 </div>
             </div>
 
-            <div class="volume-popup">
-                <div class="volume-icons">
-                    <div class="volumemuted icon">🔇</div>
-                    <div class="volumelow icon">🔉</div>
-                    <div class="volumefull icon">🔊</div>
-                </div>
-                <input type="range" id="volumeSlider" min="0" max="100" />
-            </div>
+
 
             <div class="taskbar">
                 <div class="left">
@@ -139,14 +149,14 @@
                             <div class="batterypercent"></div>
                         </div>
                     </div>
-                    <div class="icon wifi">
+                    <div class="icon wifi wifi-trigger">
                         <img src="./10125_icons/imageres_6004.ico" alt="">
                     </div>
-                    <div class="icon wifioff">
+                    <div class="icon wifioff wifi-trigger">
                         <img src="./10125_icons/icons8-wifi-off-50.png" alt="">
                     </div>
 
-                    <div class="icon airplane">
+                    <div class="icon airplane wifi-trigger">
                         <img src="./10125_icons/imageres_6250.ico" alt="">
                     </div>
                     <div class="icon volumefull">
