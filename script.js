@@ -400,3 +400,17 @@ document.addEventListener('click', (e) => {
     startMenu.style.display = 'none';
   }
 });
+const contextMenu = document.getElementById('custom-context-menu');
+
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+  contextMenu.style.display = 'block';
+  contextMenu.style.left = `${e.pageX}px`;
+  contextMenu.style.top = `${e.pageY}px`;
+});
+
+document.addEventListener('click', function (e) {
+  if (!contextMenu.contains(e.target)) {
+    contextMenu.style.display = 'none';
+  }
+});

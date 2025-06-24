@@ -924,3 +924,79 @@ main {
 .tile:hover {
   background-color: #444;
 }
+.context-menu li {
+  list-style: none;
+  padding: 6px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #000;
+  white-space: nowrap;
+  gap: 8px; /* Spacing for icon/text, not arrow */
+}
+
+/* Only submenu items spaced left to right */
+.context-menu li.has-submenu {
+  justify-content: space-between;
+}
+
+/* Optional: gray disabled style */
+.context-menu li.disabled {
+  color: gray;
+  pointer-events: none;
+}
+
+/* Hover effect */
+.context-menu li:hover:not(.disabled) {
+  background-color: #0078d7;
+  color: white;
+}
+
+.context-menu i {
+  font-size: 14px;
+}
+
+/* Context Menu Panel */
+.context-menu {
+  position: absolute;
+  display: none;
+  background: #f0f0f0;
+  border: 1px solid #aaa;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+  width: 220px;
+  padding: 5px 0;
+  z-index: 9999;
+  border-radius: 3px;
+}
+
+/* Divider line */
+.context-menu hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 5px 0;
+}
+
+/* Submenu setup */
+.has-submenu {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: -4px;
+  background-color: #f0f0f0;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  padding: 5px 0;
+  width: 180px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+}
