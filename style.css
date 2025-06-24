@@ -792,3 +792,135 @@ main {
   opacity: 0.6;
   pointer-events: none;
 }
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.start-menu {
+  position: absolute;
+  bottom: 55px;
+  left: 10px;
+  width: 700px;
+  height: 500px;
+  background-color: #202020;
+  color: white;
+  display: none;
+  flex-direction: row;
+  box-shadow: 0 0 10px rgba(0,0,0,0.8);
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 1000;
+  animation: slideUp 0.3s ease forwards;
+}
+
+
+.start-left {
+  width: 40%;
+  background-color: #1e1e1e;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.start-search {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.app-list {
+  flex: 1;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.app-list li {
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+  font-size: 14px;
+  color: #ccc;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.app-list li img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.app-list li:hover {
+  background-color: #2a2a2a;
+}
+
+.start-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.profile img,
+.power img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.start-right {
+  width: 60%;
+  padding: 10px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section h4 {
+  margin: 0 0 10px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  gap: 10px;
+}
+
+.tile {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.tile:hover {
+  background-color: #444;
+}

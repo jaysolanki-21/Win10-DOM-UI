@@ -381,3 +381,22 @@ document.addEventListener('click', (e) => {
     popup.style.display = 'none';
   }
 });
+const startButton = document.querySelector('.start.taskicon');
+const startMenu = document.getElementById('start-menu');
+
+startButton.addEventListener('click', () => {
+  const isVisible = startMenu.style.display === 'flex';
+
+  if (!isVisible) {
+    startMenu.style.display = 'flex';
+    startMenu.style.animation = 'slideUp 0.3s ease forwards';
+  } else {
+    startMenu.style.display = 'none';
+  }
+});
+
+document.addEventListener('click', (e) => {
+  if (!startMenu.contains(e.target) && !startButton.contains(e.target)) {
+    startMenu.style.display = 'none';
+  }
+});
