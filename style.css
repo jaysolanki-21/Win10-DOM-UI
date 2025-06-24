@@ -932,21 +932,18 @@ main {
   align-items: center;
   color: #000;
   white-space: nowrap;
-  gap: 8px; /* Spacing for icon/text, not arrow */
+  gap: 8px; 
 }
 
-/* Only submenu items spaced left to right */
 .context-menu li.has-submenu {
   justify-content: space-between;
 }
 
-/* Optional: gray disabled style */
 .context-menu li.disabled {
   color: gray;
   pointer-events: none;
 }
 
-/* Hover effect */
 .context-menu li:hover:not(.disabled) {
   background-color: #0078d7;
   color: white;
@@ -956,7 +953,6 @@ main {
   font-size: 14px;
 }
 
-/* Context Menu Panel */
 .context-menu {
   position: absolute;
   display: none;
@@ -971,14 +967,12 @@ main {
   border-radius: 3px;
 }
 
-/* Divider line */
 .context-menu hr {
   border: none;
   border-top: 1px solid #ccc;
   margin: 5px 0;
 }
 
-/* Submenu setup */
 .has-submenu {
   position: relative;
 }
