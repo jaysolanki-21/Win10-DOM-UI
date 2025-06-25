@@ -414,3 +414,21 @@ document.addEventListener('click', function (e) {
     contextMenu.style.display = 'none';
   }
 });
+
+const powerButton = document.querySelector('.power-button');
+const powerPopup = document.getElementById('power-popup');
+
+powerButton.addEventListener('click', () => {
+  startMenu.style.display = 'none';
+  powerPopup.style.display = 'flex';
+});
+
+document.addEventListener('click', (e) => {
+  const isPowerBtn = powerButton.contains(e.target);
+  const isPopup = powerPopup.contains(e.target);
+  const isStart = startButton.contains(e.target);
+
+  if (!isPowerBtn && !isPopup && !isStart) {
+    powerPopup.style.display = 'none';
+  }
+});

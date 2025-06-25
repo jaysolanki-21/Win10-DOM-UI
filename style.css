@@ -994,3 +994,36 @@ main {
 .has-submenu:hover .submenu {
   display: block;
 }
+
+.power-button {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.5rem;
+}
+
+.power-popup {
+  position: absolute;
+  bottom: 60px;
+  left: 50px;
+  background-color: #2d2d2d;
+  color: white;
+  padding: 8px 0;
+  border-radius: 6px;
+  display: none;
+  flex-direction: column;
+  width: 150px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  z-index: 1100;
+}
+
+.power-option {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.power-option:hover {
+  background-color: #3a3a3a;
+}
