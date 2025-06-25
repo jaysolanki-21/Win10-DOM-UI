@@ -1,4 +1,3 @@
-
 # Windows 10 UI - JavaScript Project Documentation
 
 ## Overview
@@ -14,13 +13,14 @@ This project mimics the behavior and design of the Windows 10 UI using HTML, CSS
 - Start menu popup with animation
 - Custom context menu on right-click
 - File explorer open/close toggles
+- Power button in Start Menu toggles shutdown options
 
 ---
 
 ## Key Functions and Behavior
 
 ### 1. showdateandtime
-**Purpose**: Display the system time in HH:MM 24-hour format.
+**Purpose**: Display the system time in HH:MM 24-hour format.  
 **Uses**: `Date`, `toLocaleTimeString`, `split`, `setInterval`
 
 ### 2. decreasebattery
@@ -30,7 +30,7 @@ This project mimics the behavior and design of the Windows 10 UI using HTML, CSS
 **Purpose**: Hide the "This PC" window by default on page load.
 
 ### 4. toggleState(button, key)
-**Purpose**: Toggle the ON/OFF state of a given notification button.
+**Purpose**: Toggle the ON/OFF state of a given notification button.  
 **Storage**: Uses `localStorage.notification`
 
 ---
@@ -41,11 +41,11 @@ This project mimics the behavior and design of the Windows 10 UI using HTML, CSS
 - Stored in `localStorage.notification.sound`
 
 ### Icon Mapping
-| Volume Range | Taskbar Icon        | Popup Icon         |
-|--------------|---------------------|---------------------|
-| 0            | volumemuted         | volumemuted         |
-| 1-50         | volumelow           | volumelow           |
-| 51-100       | volumefull          | volumefull          |
+| Volume Range | Taskbar Icon  | Popup Icon   |
+|--------------|----------------|---------------|
+| 0            | volumemuted    | volumemuted   |
+| 1-50         | volumelow      | volumelow     |
+| 51-100       | volumefull     | volumefull    |
 
 ### Important Functions
 
@@ -69,11 +69,11 @@ Updates localStorage and icons live as user moves the slider.
 - Toggling other buttons updates the UI and storage accordingly.
 
 ### Icon Display Logic
-| State              | Icons Shown     |
-|--------------------|-----------------|
-| Airplane: ON       | airplane        |
-| Wi-Fi: ON          | wifi            |
-| Wi-Fi: OFF         | wifioff         |
+| State              | Icons Shown  |
+|--------------------|---------------|
+| Airplane: ON       | airplane      |
+| Wi-Fi: ON          | wifi          |
+| Wi-Fi: OFF         | wifioff       |
 
 ---
 
@@ -93,6 +93,19 @@ Updates localStorage and icons live as user moves the slider.
 
 ---
 
+## Power Popup in Start Menu
+
+### Description
+- Clicking the power icon inside the Start Menu toggles a power popup menu.
+- Available options can include Shutdown, Restart, and Sleep.
+- Start Menu hides automatically when power options are opened.
+
+### Functionality
+- Power button inside `.start-menu .power-button` toggles `.power-popup` visibility.
+- CSS manages its layout and transition.
+
+---
+
 ## Custom Context Menu
 
 - Appears on right-click anywhere in the document
@@ -103,14 +116,15 @@ Updates localStorage and icons live as user moves the slider.
 
 ## Event Summary Table
 
-| Event                     | Target Selector                        | Purpose                                   |
-|--------------------------|----------------------------------------|-------------------------------------------|
-| Clock                    | `.datetime span`                       | Show current time                         |
-| Notification Panel       | `.notificationicon`                    | Show/hide notification panel              |
-| Volume Popup             | `.volumefull`, `.volumelow`, etc.      | Toggle volume control visibility          |
-| Wi-Fi Panel              | `.icon.wifi`, `.icon.airplane`         | Toggle Wi-Fi settings popup               |
-| Start Menu               | `.start.taskicon`                      | Slide-in menu on button click             |
-| Context Menu             | `document`                             | Show/hide custom right-click menu         |
+| Event               | Target Selector                 | Purpose                          |
+|--------------------|----------------------------------|----------------------------------|
+| Clock              | `.datetime span`                | Show current time                |
+| Notification Panel | `.notificationicon`             | Show/hide notification panel     |
+| Volume Popup       | `.volumefull`, `.volumelow`, etc| Toggle volume control visibility |
+| Wi-Fi Panel        | `.icon.wifi`, `.icon.airplane`  | Toggle Wi-Fi settings popup      |
+| Start Menu         | `.start.taskicon`               | Slide-in menu on button click    |
+| Context Menu       | `document`                      | Show/hide custom right-click menu|
+| Power Popup        | `.start-menu .power-button`     | Toggle shutdown options          |
 
 ---
 
@@ -120,4 +134,3 @@ Updates localStorage and icons live as user moves the slider.
 |----------------|----------|----------------------------------|
 | `notification` | Object   | Volume, toggles (on/off)         |
 | `wifiPanel`    | Object   | Wi-Fi, airplane, hotspot states  |
-
