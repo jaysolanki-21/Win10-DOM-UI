@@ -14,6 +14,7 @@ This project mimics the behavior and design of the Windows 10 UI using HTML, CSS
 - Custom context menu on right-click
 - File explorer open/close toggles
 - Power button in Start Menu toggles shutdown options
+- Control Panel UI with system category layout
 
 ---
 
@@ -84,12 +85,10 @@ Updates localStorage and icons live as user moves the slider.
 - Clicking outside closes it
 
 ### Animation
-```css
 @keyframes slideUp {
   from { transform: translateY(100%); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
-```
 
 ---
 
@@ -114,6 +113,26 @@ Updates localStorage and icons live as user moves the slider.
 
 ---
 
+## Control Panel UI
+
+### Description
+- Replicates the Windows 10 Control Panel category layout.
+- Each category includes an icon, title, and relevant sub-options.
+- Fully styled using CSS grid/flexbox.
+- Icons used from Icons8 with `img.icons8.com` links.
+
+### Sections
+- System and Security
+- Network and Internet
+- Hardware and Sound
+- Programs
+- User Accounts
+- Appearance and Personalization
+- Clock and Region
+- Ease of Access
+
+---
+
 ## Event Summary Table
 
 | Event               | Target Selector                 | Purpose                          |
@@ -134,3 +153,4 @@ Updates localStorage and icons live as user moves the slider.
 |----------------|----------|----------------------------------|
 | `notification` | Object   | Volume, toggles (on/off)         |
 | `wifiPanel`    | Object   | Wi-Fi, airplane, hotspot states  |
+"""
