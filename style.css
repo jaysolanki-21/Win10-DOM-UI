@@ -1027,3 +1027,59 @@ main {
 .power-option:hover {
   background-color: #3a3a3a;
 }
+
+ .containerofcp {
+      padding: 20px 40px;
+      display: none;
+      height: 100%;
+    }
+
+    .title {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .viewby {
+      text-align: right;
+      font-size: 14px;
+      color: #0078D7;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .panel-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .panel-item img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .panel-text {
+      font-size: 14px;
+    }
+
+    .panel-text b {
+      font-size: 16px;
+      color: green;
+    }
+
+    .panel-text a {
+      display: block;
+      color: #0066cc;
+      text-decoration: none;
+      margin-top: 4px;
+    }
+
+    .panel-text a:hover {
+      text-decoration: underline;
+    }

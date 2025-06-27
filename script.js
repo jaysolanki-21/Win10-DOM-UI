@@ -432,3 +432,9 @@ document.addEventListener('click', (e) => {
     powerPopup.style.display = 'none';
   }
 });
+
+
+document.querySelector('.homenetwork').addEventListener('click', () => {
+  document.querySelector('.thispc').style.display = 'none';
+  document.querySelector('.containerofcp').style.display = 'block';
+});
