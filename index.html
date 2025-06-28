@@ -84,77 +84,83 @@
             <div class="power-option">Shut down</div>
         </div>
 
+        <div class="battery-popup">
+            <div class="battery-icon">
+                <div class="battery-level"></div>
+            </div>
+            <span class="battery-percent">89%</span>
+        </div>
+
         <div class="containerofcp">
-            <div class="title">Adjust your computer's settings</div>
-            <div class="viewby">View by: <b>Category</b></div>
-
-            <div class="grid">
-                <div class="panel-item">
-                    <img src="https://img.icons8.com/color/48/security-checked--v1.png" alt="System">
-                    <div class="panel-text">
-                        <b>System and Security</b>
-                        <a href="#">Review your computer's status</a>
-                        <a href="#">Save backup copies of your files</a>
-                        <a href="#">Backup and Restore (Windows 7)</a>
-                    </div>
+            <div class="titlebar">
+                <div class="titlebar-left">
+                    <img src="https://img.icons8.com/fluency/24/windows-client.png" alt="icon" />
+                    <span>Control Panel</span>
                 </div>
-
-                <div class="panel-item">
-                    <img src="https://img.icons8.com/color/48/internet--v1.png" alt="Network">
-                    <div class="panel-text">
-                        <b>Network and Internet</b>
-                        <a href="#">View network status and tasks</a>
-                    </div>
+                <div class="titlebar-right">
+                    <button class="title-btn" id="minimize">–</button>
+                    <button class="title-btn" id="maximize">☐</button>
+                    <button class="title-btn close">✕</button>
                 </div>
+            </div>
 
-                <div class="panel-item">
-                    <img src="https://img.icons8.com/color/48/computer-support.png" alt="Hardware">
-                    <div class="panel-text">
-                        <b>Hardware and Sound</b>
-                        <a href="#">View devices and printers</a>
-                        <a href="#">Add a device</a>
-                        <a href="#">Adjust commonly used settings</a>
-                    </div>
-                </div>
+            <div style="padding: 20px 40px;">
+                <div class="title">Adjust your computer's settings</div>
+                <div class="viewby">View by: <b>Category</b></div>
 
-                <div class="panel-item">
-                    <img src="https://img.icons8.com/color/48/filled-trash.png" alt="Programs">
-                    <div class="panel-text">
-                        <b>Programs</b>
-                        <a href="#">Uninstall a program</a>
+                <div class="grid">
+                    <div class="panel-item">
+                        <img src="https://img.icons8.com/color/48/security-checked--v1.png" alt="System">
+                        <div class="panel-text">
+                            <b>System and Security</b>
+                            <a href="#">Review your computer's status</a>
+                            <a href="#">Save backup copies of your files</a>
+                            <a href="#">Backup and Restore (Windows 7)</a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="panel-item">
-                    <img src="https://img.icons8.com/fluency/48/user-group-man-man.png" alt="User Accounts" />
-                    <div class="panel-text">
-                        <b>User Accounts</b>
-                        <a href="#">Change account type</a>
+                    <div class="panel-item">
+                        <img src="https://img.icons8.com/color/48/internet--v1.png" alt="Network">
+                        <div class="panel-text">
+                            <b>Network and Internet</b>
+                            <a href="#">View network status and tasks</a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="panel-item">
-                    <img src="https://img.icons8.com/fluency/48/windows-10-personalization.png" alt="Appearance and Personalization" />
-                    <div class="panel-text">
-                        <b>Appearance and Personalization</b>
+                    <div class="panel-item">
+                        <img src="https://img.icons8.com/color/48/computer-support.png" alt="Hardware">
+                        <div class="panel-text">
+                            <b>Hardware and Sound</b>
+                            <a href="#">View devices and printers</a>
+                            <a href="#">Add a device</a>
+                            <a href="#">Adjust commonly used settings</a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="panel-item">
-                    <img src="https://img.icons8.com/color/48/clock--v1.png" alt="Clock">
-                    <div class="panel-text">
-                        <b>Clock and Region</b>
-                        <a href="#">Change date, time or number formats</a>
+                    <div class="panel-item">
+                        <img src="https://img.icons8.com/color/48/filled-trash.png" alt="Programs">
+                        <div class="panel-text">
+                            <b>Programs</b>
+                            <a href="#">Uninstall a program</a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="panel-item">
-                    <img src="https://img.icons8.com/fluency/48/accessibility.png" alt="Ease of Access" />
-                    <div class="panel-text">
-                        <b>Ease of Access</b>
-                        <a href="#">Let Windows suggest settings</a>
-                        <a href="#">Optimize visual display</a>
+                    <div class="panel-item">
+                        <img src="https://img.icons8.com/fluency/48/user-group-man-man.png" alt="User Accounts" />
+                        <div class="panel-text">
+                            <b>User Accounts</b>
+                            <a href="#">Change account type</a>
+                        </div>
                     </div>
+
+                    <div class="panel-item">
+                        <img src="https://img.icons8.com/color/48/clock--v1.png" alt="Clock">
+                        <div class="panel-text">
+                            <b>Clock and Region</b>
+                            <a href="#">Change date, time or number formats</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -315,7 +321,7 @@
                         <span>09:41</span>
                     </div>
                     <div class="battery">
-                        <div class="batteryicon">
+                        <div class="batteryicon task-battery-icon">
                             <div class="batterypercent"></div>
                         </div>
                     </div>
@@ -363,15 +369,9 @@
                         </div>
                     </div>
                     <div class="right">
-                        <div class="minimize">
-                            <i class="ri-subtract-line"></i>
-                        </div>
-                        <div class="maximize">
-                            <i class="ri-fullscreen-line"></i>
-                        </div>
-                        <div class="close">
-                            <i class="ri-close-line"></i>
-                        </div>
+                        <button class="title-btn" id="minimize">–</button>
+                        <button class="title-btn" id="maximize">☐</button>
+                        <button class="title-btn close">✕</button>
                     </div>
                 </div>
                 <div class="second">

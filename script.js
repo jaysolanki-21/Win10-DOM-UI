@@ -19,13 +19,53 @@ function showdateandtime() {
 showdateandtime();
 
 function decreasebattery() {
-    let battery = document.querySelector('.batterypercent');
+    const batteryFill = document.querySelector('.battery-level');
+    const batteryPercentText = document.querySelector('.battery-percent');
     let percent = 100;
+
+    batteryFill.style.width = `${percent}%`;
+    batteryPercentText.textContent = `${percent}%`;
+
     setInterval(() => {
-        percent -= 1;
-        battery.style.width = `${percent}%`;
-    }, 1000);
+        if (percent > 0) {
+            percent -= 1;
+
+            batteryFill.style.width = `${percent}%`;
+            batteryPercentText.textContent = `${percent}%`;
+
+            if (percent <= 20) {
+                batteryFill.style.background = "#ff5252"; 
+            } else if (percent <= 50) {
+                batteryFill.style.background = "#ffb300"; 
+            } else {
+                batteryFill.style.background = "#8bc34a"; 
+            }
+        }
+    }, 10000);
 }
+
+decreasebattery();
+
+const batteryIconTaskbar = document.querySelector(".task-battery-icon");
+const batteryPopup = document.querySelector(".battery-popup");
+
+batteryIconTaskbar.addEventListener("click", () => {
+    batteryPopup.classList.toggle("show");
+    batteryPopup.style.display = batteryPopup.classList.contains("show")
+        ? "flex"
+        : "none";
+});
+
+document.addEventListener("click", (e) => {
+    if (
+        !batteryPopup.contains(e.target) &&
+        !batteryIconTaskbar.contains(e.target)
+    ) {
+        batteryPopup.classList.remove("show");
+        batteryPopup.style.display = "none";
+    }
+});
+
 
 function hideelements() {
     document.querySelector('.thispc').style.display = 'none';
@@ -220,7 +260,7 @@ function updateVolumeIcon(volume) {
 
 function setupVolumeSlider() {
   const slider = document.getElementById("volumeSlider");
-  const volumeValue = document.getElementById("volumeValue"); // 👈
+  const volumeValue = document.getElementById("volumeValue"); 
 
   if (!slider || !volumeValue) return;
 
@@ -228,7 +268,7 @@ function setupVolumeSlider() {
   const currentVolume = parseInt(settings.sound);
 
   slider.value = currentVolume;
-  volumeValue.textContent = `${currentVolume}%`; // 👈
+  volumeValue.textContent = `${currentVolume}%`; 
   updateVolumeIcon(currentVolume);
 
   slider.addEventListener("input", function () {
@@ -236,7 +276,7 @@ function setupVolumeSlider() {
     settings.sound = newVolume.toString();
     saveNotificationSettings(settings);
 
-    volumeValue.textContent = `${newVolume}%`; // 👈
+    volumeValue.textContent = `${newVolume}%`; 
     updateVolumeIcon(newVolume);
   });
 }
@@ -434,7 +474,17 @@ document.addEventListener('click', (e) => {
 });
 
 
-document.querySelector('.homenetwork').addEventListener('click', () => {
+document.querySelector('.homenetwork').addEventListener('dblclick', () => {
   document.querySelector('.thispc').style.display = 'none';
   document.querySelector('.containerofcp').style.display = 'block';
 });
+
+function closeControlPanel() {
+  const container = document.querySelector('.containerofcp');
+  const screen = document.querySelector('.screen');
+
+  container.style.display = 'none';
+  screen.style.display = 'block';
+}
+
+document.querySelector('.title-btn.close').addEventListener('click', closeControlPanel);

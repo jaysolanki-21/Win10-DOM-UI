@@ -1029,7 +1029,6 @@ main {
 }
 
  .containerofcp {
-      padding: 20px 40px;
       display: none;
       height: 100%;
     }
@@ -1083,3 +1082,105 @@ main {
     .panel-text a:hover {
       text-decoration: underline;
     }
+
+  .battery-popup {
+  position: fixed;
+  right: 70px;          
+  bottom: 55px;        
+  display: none;         
+  align-items: center;
+  gap: 14px;
+  padding: 12px 20px;
+  background: #2a2a2a;
+  color: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+.battery-icon {
+  width: 52px;
+  height: 26px;
+  border: 3px solid #fff;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.battery-icon::after {         /* little positive terminal */
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: -6px;
+  width: 4px;
+  height: 12px;
+  background: #fff;
+}
+
+.battery-level {
+  height: 100%;
+  background: #8bc34a;
+  transition: width 0.3s;
+}
+
+.battery-percent {
+  font-weight: 300;
+}
+
+.battery-popup.show {
+  animation: batteryFade 0.25s ease;
+}
+@keyframes batteryFade {
+  from { transform: translateY(10px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+.containerofcp .titlebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e5e5e5;
+    padding: 6px 10px;
+    border-bottom: 1px solid #ccc;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    user-select: none;
+    cursor: default;
+}
+
+.containerofcp .titlebar-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.containerofcp .titlebar-left img {
+    width: 20px;
+    height: 20px;
+}
+
+.titlebar-right {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.title-btn {
+    background: transparent;
+    border: none;
+    width: 36px;
+    height: 28px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.containerofcp .title-btn:hover {
+    background: #d0d0d0;
+}
+
+.containerofcp .title-btn.close:hover {
+    background: #e81123;
+    color: white;
+}
