@@ -1184,3 +1184,161 @@ main {
     background: #e81123;
     color: white;
 }
+
+.google{
+  width: 100%;
+  height: 95%;
+}
+
+.container-google {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-between;
+  font-family: Arial, sans-serif;
+}
+
+.google-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+}
+
+.google-logo {
+  width: 272px;
+  height: 92px;
+  background: url("https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png") no-repeat center;
+  background-size: contain;
+  margin-bottom: 28px;
+}
+
+.google-search-bar {
+  width: 100%;
+  max-width: 580px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  padding: 0 14px;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+}
+
+.google-search-bar:focus-within {
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.4);
+}
+
+.google-search-bar input {
+  flex: 1;
+  border: none;
+  height: 44px;
+  font-size: 16px;
+  outline: none;
+}
+
+.google-icon {
+  font-size: 18px;
+  color: #9aa0a6;
+}
+
+.google-buttons {
+  margin-top: 26px;
+  display: flex;
+  gap: 8px;
+}
+
+.google-buttons button {
+  padding: 10px 16px;
+  background: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.google-buttons button:hover {
+  border: 1px solid #dadce0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.google-footer {
+  background: #f2f2f2;
+  font-size: 14px;
+}
+
+.google-footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 24px;
+  color: #70757a;
+}
+
+.google-footer-row a {
+  color: #70757a;
+  text-decoration: none;
+}
+
+.google-footer-row a:hover {
+  text-decoration: underline;
+}
+
+.between {
+  flex: 1;
+}
+
+
+.container-google .titlebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 6px 10px;
+    border-bottom: 1px solid #ccc;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    user-select: none;
+    cursor: default;
+}
+
+.container-google .titlebar-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.container-google .titlebar-left img {
+    width: 20px;
+    aspect-ratio: 1/1;
+}
+
+.titlebar-right {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.title-btn {
+    background: transparent;
+    border: none;
+    width: 36px;
+    height: 28px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.container-google .title-btn:hover {
+    background: #d0d0d0;
+}
+
+.container-google .title-btn.close:hover {
+    background: #e81123;
+    color: white;
+}

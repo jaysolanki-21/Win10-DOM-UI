@@ -488,3 +488,17 @@ function closeControlPanel() {
 }
 
 document.querySelector('.title-btn.close').addEventListener('click', closeControlPanel);
+ 
+
+document.querySelector('.app.chrome').addEventListener('click', () => {
+  document.querySelector('.screen').style.display = 'none';      
+  document.querySelector('.google').style.display = 'block';   
+});
+
+function closeGoogleWindow() {
+  document.querySelector('.google').style.display = 'none';
+  document.querySelector('.screen').style.display = 'block';
+}
+
+document.querySelector('.googleclose').addEventListener('click', closeGoogleWindow);
+

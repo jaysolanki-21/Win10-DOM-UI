@@ -206,7 +206,7 @@
         </ul>
 
 
-        <section class="homescreen">
+        <div class="homescreen">
             <div class="screen">
                 <div class="icons">
                     <div class="icon homethispc">
@@ -288,6 +288,51 @@
                 </div>
             </div>
 
+            <div class="google" style="display: none;">
+
+                <div class="container-google">
+                    <div class="titlebar">
+                        <div class="titlebar-left">
+                            <img src="./10125_icons/chrome.png" alt="">
+                            <span>Google</span>
+                        </div>
+                        <div class="titlebar-right">
+                            <button class="title-btn googleminimize" id="minimize">–</button>
+                            <button class="title-btn googlemaximize" id="maximize">☐</button>
+                            <button class="title-btn close googleclose">✕</button>
+                        </div>
+                    </div>
+                    <div class="google-main">
+                        <div class="google-logo"></div>
+
+                        <form class="google-search-bar" action="https://www.google.com/search" method="GET">
+                            <span class="google-icon">&#128269;</span>
+                            <input type="text" name="q" autocomplete="off" />
+                            <span class="google-icon">&#127908;</span>
+                        </form>
+
+                        <div class="google-buttons">
+                            <button type="submit" form="google-search-form">Google Search</button>
+                            <button type="button">I'm Feeling Lucky</button>
+                        </div>
+                    </div>
+
+                    <footer class="google-footer">
+                        <div class="google-footer-row">India</div>
+                        <hr />
+                        <div class="google-footer-row">
+                            <a href="#">About</a>
+                            <a href="#">Advertising</a>
+                            <a href="#">Business</a>
+                            <a href="#">How Search works</a>
+                            <span class="between"></span>
+                            <a href="#">Privacy</a>
+                            <a href="#">Terms</a>
+                            <a href="#">Settings</a>
+                        </div>
+                    </footer>
+                </div>
+            </div>
 
 
             <div class="taskbar">
@@ -349,177 +394,178 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="thispc">
-            <div class="titlebar">
-                <div class="first">
-                    <div class="left">
-                        <div class="icons">
-                            <div class="icon">
-                                <img src="./10125_icons/imageres_109.ico" alt="">
+            </section>
+            <section class="thispc">
+                <div class="titlebar">
+                    <div class="first">
+                        <div class="left">
+                            <div class="icons">
+                                <div class="icon">
+                                    <img src="./10125_icons/imageres_109.ico" alt="">
+                                </div>
+                                <span>|</span>
+                                <div class="icon properties">
+                                    <img src="./10125_icons/imageres_5367.ico" alt="">
+                                </div>
+                                <div class="icon newfolder">
+                                    <img src="./10125_icons/shell32_264.ico" alt="">
+                                </div>
+                                <span>| This PC</span>
                             </div>
-                            <span>|</span>
-                            <div class="icon properties">
-                                <img src="./10125_icons/imageres_5367.ico" alt="">
-                            </div>
-                            <div class="icon newfolder">
-                                <img src="./10125_icons/shell32_264.ico" alt="">
-                            </div>
-                            <span>| This PC</span>
+                        </div>
+                        <div class="right">
+                            <button class="title-btn" id="minimize">–</button>
+                            <button class="title-btn" id="maximize">☐</button>
+                            <button class="title-btn close">✕</button>
                         </div>
                     </div>
-                    <div class="right">
-                        <button class="title-btn" id="minimize">–</button>
-                        <button class="title-btn" id="maximize">☐</button>
-                        <button class="title-btn close">✕</button>
+                    <div class="second">
+                        <div class="menu">
+                            <span style="background-color: #9A641F; color: white">File</span>
+                            <span>Computer</span>
+                            <span>View</span>
+                            <span>Drive Tools</span>
+                        </div>
                     </div>
-                </div>
-                <div class="second">
-                    <div class="menu">
-                        <span style="background-color: #9A641F; color: white">File</span>
-                        <span>Computer</span>
-                        <span>View</span>
-                        <span>Drive Tools</span>
-                    </div>
-                </div>
-                <div class="third">
-                    <div class="left">
-                        <div class="leftarrow">
-                            <i class="ri-arrow-left-long-fill"></i>
-                        </div>
-                        <div class="rightarrow">
-                            <i class="ri-arrow-right-long-fill"></i>
-                        </div>
-                        <div class="downarrow">
-                            <i class="ri-arrow-down-s-line"></i>
-                        </div>
-                        <div class="uparrow">
-                            <i class="ri-arrow-up-long-fill"></i>
-                        </div>
-
-                    </div>
-                    <div class="right">
-                        <div class="location">
-                            <div class="thispcicon">
-                                <img src="./10125_icons/imageres_109.ico" alt="">
+                    <div class="third">
+                        <div class="left">
+                            <div class="leftarrow">
+                                <i class="ri-arrow-left-long-fill"></i>
                             </div>
                             <div class="rightarrow">
-                                <i class="ri-arrow-right-s-line"></i>
+                                <i class="ri-arrow-right-long-fill"></i>
                             </div>
-                            <span>This PC</span>
+                            <div class="downarrow">
+                                <i class="ri-arrow-down-s-line"></i>
+                            </div>
+                            <div class="uparrow">
+                                <i class="ri-arrow-up-long-fill"></i>
+                            </div>
+
                         </div>
-                        <div class="search">
-                            <input type="text" placeholder="Search in This PC">
-                            <div class="searchicon">
-                                <i class="ri-search-line"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="thispccontent">
-                <div class="left">
-                    <div class="collapes">
-                        <i class="ri-arrow-right-s-line rightarrow"></i>
-                        <i class="ri-arrow-down-s-line downarrow"></i>
-                        <div class="menuicon">
-                            <img src="10125_icons/shell32_51380.ico" alt="">
-                        </div>
-                        <div class="menuname">
-                            <span>Quick Access</span>
-                        </div>
-                    </div>
-                    <div class="menus">
-                        <div class="menu">
-                            <div class="menuicon">
-                                <img src="./10125_icons/shell32_35.ico" alt="">
-                            </div>
-                            <div class="menuname">
-                                <span>Desktop</span>
-                            </div>
-                        </div>
-                        <div class="menu">
-                            <div class="menuicon">
-                                <img src="./10125_icons/shell32_2.ico" alt="">
-                            </div>
-                            <div class="menuname">
-                                <span>Documents</span>
-                            </div>
-                        </div>
-                        <div class="menu">
-                            <div class="menuicon">
-                                <img src="./10125_icons/imageres_184.ico" alt="">
-                            </div>
-                            <div class="menuname">
-                                <span>Downloads</span>
-                            </div>
-                        </div>
-                        <div class="menu">
-                            <div class="menuicon">
-                                <img src="./10125_icons/shell32_63008.ico" alt="">
-                            </div>
-                            <div class="menuname">
-                                <span>Pictures</span>
-                            </div>
-                        </div>
-                        <div class="menu">
-                            <div class="menuicon">
-                                <img src="./10125_icons/shell32_16824.ico" alt="">
-                            </div>
-                            <div class="menuname">
-                                <span>Music</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="right">
-                    <div class="driverscreen">
-                        <div class="driversheading">
-                            <span><i class="ri-arrow-down-s-line devicedriverdown"></i><i
-                                    class="ri-arrow-right-s-line devicedriverright"></i> Devices and Drivers (3)</span>
-                        </div>
-                        <div class="drivers">
-                            <div class="driver">
-                                <div class="driverimage">
-                                    <img src="./10125_icons/imageres_36.ico" alt="">
+                        <div class="right">
+                            <div class="location">
+                                <div class="thispcicon">
+                                    <img src="./10125_icons/imageres_109.ico" alt="">
                                 </div>
-                                <div class="driverinfo">
-                                    <span>Local Disk (C:)</span>
-                                    <div class="storage">
-                                        <div class="fill"></div>
-                                    </div>
-                                    <span>50.0 GB free of 100 GB</span>
+                                <div class="rightarrow">
+                                    <i class="ri-arrow-right-s-line"></i>
                                 </div>
+                                <span>This PC</span>
                             </div>
-                            <div class="driver">
-                                <div class="driverimage">
-                                    <img src="./10125_icons/imageres_32.ico" alt="">
-                                </div>
-                                <div class="driverinfo">
-                                    <span>Local Disk (D:)</span>
-                                    <div class="storage">
-                                        <div class="fill"></div>
-                                    </div>
-                                    <span>100.0 GB free of 200 GB</span>
-                                </div>
-                            </div>
-                            <div class="driver">
-                                <div class="driverimage">
-                                    <img src="./10125_icons/imageres_32.ico" alt="">
-                                </div>
-                                <div class="driverinfo">
-                                    <span>Local Disk (E:)</span>
-                                    <div class="storage">
-                                        <div class="fill"></div>
-                                    </div>
-                                    <span>100.0 GB free of 200 GB</span>
+                            <div class="search">
+                                <input type="text" placeholder="Search in This PC">
+                                <div class="searchicon">
+                                    <i class="ri-search-line"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+                <div class="thispccontent">
+                    <div class="left">
+                        <div class="collapes">
+                            <i class="ri-arrow-right-s-line rightarrow"></i>
+                            <i class="ri-arrow-down-s-line downarrow"></i>
+                            <div class="menuicon">
+                                <img src="10125_icons/shell32_51380.ico" alt="">
+                            </div>
+                            <div class="menuname">
+                                <span>Quick Access</span>
+                            </div>
+                        </div>
+                        <div class="menus">
+                            <div class="menu">
+                                <div class="menuicon">
+                                    <img src="./10125_icons/shell32_35.ico" alt="">
+                                </div>
+                                <div class="menuname">
+                                    <span>Desktop</span>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <div class="menuicon">
+                                    <img src="./10125_icons/shell32_2.ico" alt="">
+                                </div>
+                                <div class="menuname">
+                                    <span>Documents</span>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <div class="menuicon">
+                                    <img src="./10125_icons/imageres_184.ico" alt="">
+                                </div>
+                                <div class="menuname">
+                                    <span>Downloads</span>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <div class="menuicon">
+                                    <img src="./10125_icons/shell32_63008.ico" alt="">
+                                </div>
+                                <div class="menuname">
+                                    <span>Pictures</span>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <div class="menuicon">
+                                    <img src="./10125_icons/shell32_16824.ico" alt="">
+                                </div>
+                                <div class="menuname">
+                                    <span>Music</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="driverscreen">
+                            <div class="driversheading">
+                                <span><i class="ri-arrow-down-s-line devicedriverdown"></i><i
+                                        class="ri-arrow-right-s-line devicedriverright"></i> Devices and Drivers
+                                    (3)</span>
+                            </div>
+                            <div class="drivers">
+                                <div class="driver">
+                                    <div class="driverimage">
+                                        <img src="./10125_icons/imageres_36.ico" alt="">
+                                    </div>
+                                    <div class="driverinfo">
+                                        <span>Local Disk (C:)</span>
+                                        <div class="storage">
+                                            <div class="fill"></div>
+                                        </div>
+                                        <span>50.0 GB free of 100 GB</span>
+                                    </div>
+                                </div>
+                                <div class="driver">
+                                    <div class="driverimage">
+                                        <img src="./10125_icons/imageres_32.ico" alt="">
+                                    </div>
+                                    <div class="driverinfo">
+                                        <span>Local Disk (D:)</span>
+                                        <div class="storage">
+                                            <div class="fill"></div>
+                                        </div>
+                                        <span>100.0 GB free of 200 GB</span>
+                                    </div>
+                                </div>
+                                <div class="driver">
+                                    <div class="driverimage">
+                                        <img src="./10125_icons/imageres_32.ico" alt="">
+                                    </div>
+                                    <div class="driverinfo">
+                                        <span>Local Disk (E:)</span>
+                                        <div class="storage">
+                                            <div class="fill"></div>
+                                        </div>
+                                        <span>100.0 GB free of 200 GB</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
     </main>
     <script src="script.js"></script>
 </body>
